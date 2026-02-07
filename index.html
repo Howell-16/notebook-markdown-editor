@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Notebook - Markdown Editor</title>
+    
+    <!-- Highlight.js CSS Theme -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- Highlight.js for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">📓</span>
+                <h1>The Notebook</h1>
+            </div>
+        </header>
+
+        <!-- Main Content - Three Panel Layout -->
+        <main class="main-content">
+            <!-- Panel 1: File List -->
+            <aside class="panel file-panel">
+                <div class="panel-header">
+                    <h2>📁 Files</h2>
+                    <button id="newFileBtn" class="btn btn-primary">+ New</button>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search files..." class="search-input">
+                </div>
+                <ul id="fileList" class="file-list">
+                    <!-- Files will be dynamically added here -->
+                </ul>
+            </aside>
+
+            <!-- Panel 2: Markdown Editor -->
+            <section class="panel editor-panel">
+                <div class="panel-header">
+                    <h2>✏️ Editor</h2>
+                </div>
+                <div class="editor-container">
+                    <input type="text" id="fileTitle" class="file-title-input" placeholder="Enter file name...">
+                    <textarea id="markdownEditor" class="markdown-editor" placeholder="Start writing your Markdown here...
+
+# Markdown Tips:
+- Use # for headings
+- Use **bold** or *italic*
+- Use - or * for lists
+- Use [text](url) for links
+- Use `code` for inline code
+- Use ```language for code blocks"></textarea>
+                </div>
+            </section>
+
+            <!-- Panel 3: Live Preview -->
+            <section class="panel preview-panel">
+                <div class="panel-header">
+                    <h2>👁️ Preview</h2>
+                </div>
+                <div id="previewContent" class="preview-content">
+                    <div class="empty-state">
+                        <p>Start typing to see the preview...</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>💾 All changes are automatically saved to your browser</p>
+        </footer>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <h3>🗑️ Delete File</h3>
+            <p>Are you sure you want to delete "<span id="deleteFileName"></span>"?</p>
+            <div class="modal-actions">
+                <button id="cancelDelete" class="btn btn-secondary">Cancel</button>
+                <button id="confirmDelete" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
