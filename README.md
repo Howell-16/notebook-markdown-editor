@@ -38,6 +38,36 @@ xdg-open index.html
 ```
 Or double-click index.html in your file explorer.
 
+## Using the Application  
+1. Create a new note
+
+* Click the "+ New" button in the file panel  
+* Enter a title for your note  
+* Start typing Markdown in the editor  
+
+2. Write Markdown
+``` markdown
+# My Note Title
+
+**Bold text** and *italic text*
+
+- List item 1
+- List item 2
+
+```python
+def hello():
+    print("Hello, World!")
+```
+
+3. View live preview
+* Preview updates automatically as you type
+* Code blocks display with syntax highlighting
+
+4. Manage files
+* Click any file in the left panel to switch
+* Use the search box to find notes
+* Click 🗑️ to delete a file
+
 ---
 
 ## 📋 Project Choice
@@ -117,7 +147,6 @@ I used an **iterative prompt-engineering approach** with multiple phases:
 
 **Phase 4: Production Readiness**
 - Consolidated all code into final, clean versions
-- Added keyboard shortcuts for better UX
 - Implemented responsive design for mobile
 - Added delete confirmation modal
 
@@ -156,3 +185,47 @@ Requirements:
 
 Please provide the complete code that fulfill the requirement above.
 ```
+
+Prompt 2: Syntax Highlighting Integration
+```text
+The code blocks in my markdown preview are showing as plain text without syntax highlighting. 
+
+Here's my current code: [provided existing code]
+
+I need to integrate Highlight.js to add syntax highlighting for code blocks in the preview panel. The highlighting should work for at least: Python, JavaScript, JSON, HTML, CSS, and Bash.
+
+Please provide the updated code with proper Highlight.js integration.
+```
+
+Prompt 3: Comprehensive Testing Document
+```text
+Can you give me a markdown script to test all the functions of my notebook markdown editor? 
+
+I want to verify:
+- All heading levels (H1-H6)
+- Text formatting (bold, italic, strikethrough)
+- Lists (ordered, unordered, nested, task lists)
+- Code blocks with syntax highlighting
+- Tables with alignment
+- Links and images
+- Blockquotes
+- Horizontal rules
+```
+
+Prompt 4: Bug Fix for Syntax Highlighting
+```text
+After running the test code, the syntax highlighting still isn't working. The output shows plain text like this:
+
+def hello():
+    print("Hello, World!")
+    return True
+
+Instead of colored syntax highlighting.
+
+Can you give me the complete working code so I can just copy and paste? I need all three files (index.html, styles.css, app.js) with properly working syntax highlighting.
+```
+
+## 🔧 Challenges & Iterations
+Challenge 1: Syntax Highlighting Not Working
+Problem:
+Code blocks displayed as plain text without any color highlighting.
