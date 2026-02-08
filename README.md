@@ -20,7 +20,7 @@ https://howell-16.github.io/notebook-markdown-editor/
 Option 2: Run Locally  
 Step 1: Clone the repository
 ```bash
-git clone https://github.com/pbelx/notebook-markdown-editor.git
+git clone https://github.com/Howell-16/notebook-markdown-editor.git
 cd notebook-markdown-editor
 ```
 Step 2: Open in browser  
@@ -285,5 +285,6 @@ notebook-markdown-editor/
 ├── app.js              # Application logic and state management
 └── README.md           # Project documentation (this file)
 ```
+
 
 
