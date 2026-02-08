@@ -123,7 +123,7 @@ I used an **iterative prompt-engineering approach** with multiple phases:
 ⬇️  
 **Phase 5:** Documentation & Deployment  
 
-
+---
 
 
 ### Phase Breakdown
@@ -154,6 +154,8 @@ I used an **iterative prompt-engineering approach** with multiple phases:
 - Created comprehensive README documentation
 - Set up GitHub Pages deployment
 - Tested live deployment
+
+---
 
 ### Architecture Design
 
@@ -284,3 +286,4 @@ notebook-markdown-editor/
 ├── app.js              # Application logic and state management
 └── README.md           # Project documentation (this file)
 ```
+
