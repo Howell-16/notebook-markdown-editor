@@ -229,7 +229,6 @@ Can you give me the complete working code so I can just copy and paste? I need a
 
 ## 🔧 Challenges & Iterations
 
----
 
 ### Challenge 1: Syntax Highlighting Not Working
 
@@ -286,4 +285,5 @@ notebook-markdown-editor/
 ├── app.js              # Application logic and state management
 └── README.md           # Project documentation (this file)
 ```
+
 
