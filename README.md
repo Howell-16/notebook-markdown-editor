@@ -226,6 +226,61 @@ Can you give me the complete working code so I can just copy and paste? I need a
 ```
 
 ## 🔧 Challenges & Iterations
-Challenge 1: Syntax Highlighting Not Working
-Problem:
+
+---
+
+### Challenge 1: Syntax Highlighting Not Working
+
+**Problem:**  
 Code blocks displayed as plain text without any color highlighting.
+
+**Expected Output:**  
+Colored syntax with keywords, strings, and functions highlighted differently.
+
+---
+
+#### Debugging Process
+
+**Iteration 1:** Added Highlight.js CDN links to HTML head  
+- Result: Still not working  
+- Issue: Marked.js wasn't configured to use Highlight.js  
+
+**Iteration 2:** Added highlight option to Marked.js configuration  
+- Result: Partial fix, some languages worked  
+- Issue: Language detection failing for some blocks  
+
+**Iteration 3:** Added fallback to `highlightAuto()` for unspecified languages  
+- Result: Better, but styling was off  
+- Issue: Missing CSS class prefix  
+
+**Final Fix:**  
+Added `langPrefix: 'hljs language-'` and post-render highlighting
+
+---
+
+### Challenge 2: Live Preview Performance
+
+**Problem:**  
+Preview lagged when typing fast.
+
+**Solution:**  
+Added debounce function (150ms delay) to limit update frequency.
+
+---
+
+### Challenge 3: Mobile Layout Issues
+
+**Problem:**  
+Three-panel layout was cramped and unusable on mobile devices.
+
+**Solution:**  
+Added responsive CSS to stack panels vertically on small screens
+
+## 📁 Project Structure
+```text
+notebook-markdown-editor/
+├── index.html          # Main HTML structure
+├── styles.css          # All styling and responsive design
+├── app.js              # Application logic and state management
+└── README.md           # Project documentation (this file)
+```
